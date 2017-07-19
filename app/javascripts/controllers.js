@@ -4,7 +4,7 @@ var tornadoNwController = angular.module('tornadoNwController', []);
 
 tornadoNwController.controller('IndexCtrl', ['$scope', '$http',
     function ($scope, $http) {
-
+        $scope.intro = "X";
         navigator.geolocation.getCurrentPosition(
             function (position) {
                 var lat = position.coords.latitude;
