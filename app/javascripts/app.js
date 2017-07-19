@@ -9,6 +9,7 @@ tornadoNw.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
         when('/', {
+            cache: false,
             templateUrl: 'static/partials/intro.html',
             controller: 'IndexCtrl'
         }).
