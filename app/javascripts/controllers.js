@@ -13,10 +13,7 @@ tornadoNwController.controller('IndexCtrl', ['$scope', '$http',
                 var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&sensor=true";
                 $http.get(url)
                     .then(function (result) {
-                        var address = result.data.results[2].formatted_address;
-                        $scope.address = address;
-                        $scope.intro = result.data.results[1].formatted_address;
-                        alert(address);
+                        $scope.address = result.data.results[1].formatted_address;
                     });
             },
             function (error) {
