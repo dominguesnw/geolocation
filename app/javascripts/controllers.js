@@ -5,7 +5,12 @@ var tornadoNwController = angular.module('tornadoNwController', []);
 tornadoNwController.controller('IndexCtrl', ['$scope', '$http',
     function ($scope, $http) {
 
-        if (navigator.geolocation) navigator.geolocation.getCurrentPosition(onPositionUpdate, error, { timeout: 3000 });
+        if (navigator.geolocation) navigator.geolocation.getCurrentPosition(
+            onPositionUpdate, error, {
+                enableHighAccuracy: true
+                , timeout: 2000
+            }
+        );
 
         function onPositionUpdate(position) {
             var lat = position.coords.latitude;
