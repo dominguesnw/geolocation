@@ -21,6 +21,7 @@ tornadoNwController.controller('IndexCtrl', ['$scope', '$http',
                     var address = result.data.results[2].formatted_address;
                     $scope.address = address;
                     $scope.intro = result.data.results[1].formatted_address;
+                    alert(address);
                 });
         };
 
